@@ -13,7 +13,7 @@ type NewLayoutProps = {
   weatherData: OpenWeatherResponse | null
   selectedUnit: 'C' | 'F'
   toggleUnit: () => void
-  currentTime: string
+  currentTime: string | null
   useNewLayout: boolean
   setUseNewLayout: Dispatch<SetStateAction<boolean>>
   bgImagePath?: string
