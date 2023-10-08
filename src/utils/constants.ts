@@ -1,1 +1,1 @@
-export let cities = ['London', 'Amsterdam', 'Moscow', 'New York']
+export let cities = ['London', 'Amsterdam', 'Moscow', 'New York', 'Tehran']

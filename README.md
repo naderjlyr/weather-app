@@ -34,7 +34,7 @@ The Weather App allows users to:
 - **getCityCurrentTime**: Gets the current time for a specified city based on its timezone offset.
 
 ### Data
-- **cities**: An array containing names of some popular cities like London, Amsterdam, Moscow, and New York, and user's current location is added dynamically.
+- **cities**: An array containing names of some popular cities like London, Amsterdam, Moscow, and New York, Tehran (Hometown) and user's current location is added dynamically.
 
 ## Installation & Usage
 
