@@ -30,15 +30,12 @@ export const DefaultLayout = ({
   setUseNewLayout,
 }: DefaultLayoutProps) => {
   return (
-    <div
-      className="h-screen relative bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImagePath})` }}
-    >
+    <div className="h-screen relative bg-cover bg-center">
       <div className="absolute inset-0 backdrop-blur-md"></div>
       <div className="h-screen flex w-full mx-auto my-auto rounded-lg relative bg-cover flex-col md:w-full">
         <div
           className="flex flex-col md:flex-row justify-between h-full items-start p-6 bg-cover bg-center"
-          style={{ backgroundImage: `url(${bgImagePath})` }}
+          style={{ backgroundImage: `url(${bgImagePath || ''})` }}
         >
           <WeatherInfo
             weatherData={weatherData}
