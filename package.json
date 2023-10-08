@@ -11,7 +11,6 @@
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "test": "jest",
     "test:watch": "jest --watch"
-
   },
   "dependencies": {
     "@mui/base": "^5.0.0-beta.18",
@@ -26,6 +25,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
+    "styled-jsx": "^5.1.2",
     "tailwind-merge": "^1.14.0",
     "weather-icons-react": "^1.2.0"
   },
