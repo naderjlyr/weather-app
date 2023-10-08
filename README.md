@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App
 
-## Getting Started
+A simple weather application designed with modularity and usability in mind.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The Weather App allows users to:
+- Fetch user's location data `IPStack` API.
+- Retrieve weather data based on a given city `OpenWeatherMap` API.
+- Obtain an image for a given city from `Unsplash` API.
+- Switch between Celsius and Fahrenheit units.
+- Toggle between different layout views.
+- View current time for a selected city.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Modules
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### API Integrations
+- **IPStack Integration**: Fetches the user's location.
+- **OpenWeather Integration**: Retrieves weather data based on the provided city.
+- **City Image API**: Obtains a representative image for a given city.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Components
+- **City Component**: The main component that displays the city-specific data.
+- **DefaultLayout** and **NewLayout**: Two different layout options for displaying weather details.
+- **WeatherInfo**: Displays the primary weather data.
+- **TimeInfo**: Displays the current time for a selected city.
+- **WeatherDetails**: Provides additional details about the weather.
+- **CitySelector**: Allows users to select a city.
 
-## Learn More
+### Utility Functions
+- **useCurrentTime**: Custom hook to keep track of the current time.
+- **celsiusToFahrenheit**: Converts Celsius to Fahrenheit.
+- **formatDateStandard**: Formats a given date to a standard format.
+- **getCityCurrentTime**: Gets the current time for a specified city based on its timezone offset.
 
-To learn more about Next.js, take a look at the following resources:
+### Data
+- **cities**: An array containing names of some popular cities like London, Amsterdam, Moscow, and New York, and user's current location is added dynamically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation & Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository.
+2. Install the required dependencies with `npm install`.
+3. Set up the required environment variables:
+    - `NEXT_PUBLIC_IPSTACK_URL`
+    - `NEXT_PUBLIC_IPSTACK_API_KEY`
+    - `NEXT_PUBLIC_OPEN_WEATHER_URL`
+    - `NEXT_PUBLIC_OPEN_WEATHER_API_KEY`
+    - `NEXT_PUBLIC_CITY_IMAGE_URL`
+    - `NEXT_PUBLIC_CITY_IMAGE_API_KEY`
+4. Start the development server with `npm run dev`.
+5. Visit `localhost:3000` on your browser to see the application in action.
 
-## Deploy on Vercel
+## Dependencies
+- **React & Next.js**: For building the UI and server-side rendering.
+- **Axios**: For making HTTP requests.
+- **Framer-Motion**: For animations.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
+- Always ensure to secure your API keys.
+- Due to the code truncation, some components like WeatherDetails, WiHumidity, WiBarometer, etc., were not fully described. Ensure to explore the codebase for a comprehensive understanding of all components and utilities.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributions
+Contributions are welcome! Please submit a PR with any improvements or features.
