@@ -2,6 +2,9 @@
 
 A simple weather application designed with modularity and usability in mind.
 
+Demo : 
+https://weatherapp-d6c7eb.netlify.app/
+
 ## Overview
 
 The Weather App allows users to:
